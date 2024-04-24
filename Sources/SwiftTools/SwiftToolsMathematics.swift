@@ -6,7 +6,8 @@
 //
 
 import Foundation
-class SwiftToolsMathematics{
+public class SwiftToolsMathematics{
+    public init(){}
     func gcd(a:Int,b:Int) -> Int
     {
         let min = min(a,b)

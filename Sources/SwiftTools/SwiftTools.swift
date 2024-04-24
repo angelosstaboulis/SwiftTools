@@ -2,6 +2,8 @@
 // https://docs.swift.org/swift-book
 import Foundation
 public class SwiftTools{
+    public init(){}
+    
     func getCurrentDate()->String{
         let newDate = DateFormatter()
         newDate.dateStyle = .full

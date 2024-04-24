@@ -6,7 +6,8 @@
 //
 
 import Foundation
-class SwiftToolsArray{
+public class SwiftToolsArray{
+    public init(){}
     func differenceDiagonal(numbers:[[Int]])->Int{
         var col1 = 0
         var col2 = numbers.count-1

@@ -5,7 +5,8 @@
 //  Created by Angelos Staboulis on 24/4/24.
 //
 import Foundation
-class SwiftToolsString{
+public class SwiftToolsString{
+    public init(){}
     func reverseString(source:String)->String{
         var reversedString = String()
         for character in stride(from: source.count-1, to: -1, by: -1){
