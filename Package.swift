@@ -10,6 +10,15 @@ let package = Package(
         .library(
             name: "SwiftTools",
             targets: ["SwiftTools"]),
+        .library(
+            name: "SwiftToolsArray",
+            targets: ["SwiftTools"]),
+        .library(
+            name: "SwiftToolsMathematics",
+            targets: ["SwiftTools"]),
+        .library(
+            name: "SwiftToolsString",
+            targets: ["SwiftTools"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
