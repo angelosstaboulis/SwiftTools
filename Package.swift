@@ -16,6 +16,9 @@ let package = Package(
         .library(
             name: "SwiftToolsString",
             targets: ["SwiftToolsString"]),
+        .library(
+            name: "SwiftToolsArray",
+            targets: ["SwiftToolsArray"]),
      
     ],
     targets: [
@@ -27,6 +30,8 @@ let package = Package(
             name: "SwiftToolsString"),
         .target(
             name: "SwiftToolsMathematics"),
+        .target(
+            name: "SwiftToolsArray"),
         .testTarget(
             name: "SwiftToolsTests",
             dependencies: ["SwiftTools"]),
