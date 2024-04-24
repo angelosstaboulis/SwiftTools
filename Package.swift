@@ -10,6 +10,12 @@ let package = Package(
         .library(
             name: "SwiftTools",
             targets: ["SwiftTools"]),
+        .library(
+            name: "SwiftToolsMathematics",
+            targets: ["SwiftTools"]),
+        .library(
+            name: "SwiftToolsString",
+            targets: ["SwiftTools"]),
      
     ],
     targets: [
