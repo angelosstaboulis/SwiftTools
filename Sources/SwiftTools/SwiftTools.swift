@@ -4,27 +4,27 @@ import Foundation
 public class SwiftTools{
     public init(){}
     
-    func getCurrentDate()->String{
+    public func getCurrentDate()->String{
         let newDate = DateFormatter()
         newDate.dateStyle = .full
         newDate.dateFormat = "EEEE dd.MMMM.yyyy hh:mm:ss"
         return newDate.string(from: Date())
     }
-    func getCurrentTime()->String{
+    public func getCurrentTime()->String{
         let newTime = DateFormatter()
         newTime.timeStyle = .medium
         newTime.dateFormat = "hh:mm:ss"
         return newTime.string(from: Date())
     }
-    func digits(number:Int)->Int{
+    public func digits(number:Int)->Int{
         var digits:[Int] = []
-        var getNumber:Int!=0
+        var getNumber = 0
         getNumber = number
         while(getNumber != 0){
             digits.append(getNumber%10)
             getNumber = getNumber / 10
         }
-        var counter:Int!=0
+        var counter = 0
         for digit in digits{
             if digit != 0{
                 if number%digit == 0 {
@@ -37,8 +37,8 @@ public class SwiftTools{
 
     func minimumSwaps(arr: [Int]) -> Int {
         let getArray = arr
-        var minValue:Int!=0
-        var subItem:Int!=0
+        var minValue = 0
+        var subItem = 0
         for _ in 0..<getArray.count{
             if subItem < getArray.count-1{
                 if getArray[subItem] != subItem+1{

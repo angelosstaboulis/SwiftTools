@@ -8,7 +8,7 @@
 import Foundation
 public class SwiftToolsArray{
     public init(){}
-    func differenceDiagonal(numbers:[[Int]])->Int{
+    public func differenceDiagonal(numbers:[[Int]])->Int{
         var col1 = 0
         var col2 = numbers.count-1
         var sumDiagonal1 = 0
@@ -26,28 +26,28 @@ public class SwiftToolsArray{
         }
         return abs(sumDiagonal2 - sumDiagonal1)
     }
-    func addArrays<T:Numeric>(source:[T],destination:[T])->[T]{
+    public func addArrays<T:Numeric>(source:[T],destination:[T])->[T]{
         var sumArray:[T] = []
         for item in 0..<source.count{
             sumArray.append(source[item]+destination[item])
         }
         return sumArray
     }
-    func subArrays<T:Numeric>(source:[T],destination:[T])->[T]{
+    public func subArrays<T:Numeric>(source:[T],destination:[T])->[T]{
         var subArray:[T] = []
         for item in 0..<source.count{
             subArray.append(source[item]-destination[item])
         }
         return subArray
     }
-    func multiArrays<T:Numeric>(source:[T],destination:[T])->[T]{
+    public func multiArrays<T:Numeric>(source:[T],destination:[T])->[T]{
         var multiArray:[T] = []
         for item in 0..<source.count{
             multiArray.append(source[item]*destination[item])
         }
         return multiArray
     }
-    func removeDuplicates(array:[AnyHashable])->Array<any Numeric>{
+    public func removeDuplicates(array:[AnyHashable])->Array<any Numeric>{
         let newArray = Array(Set(array))
         var returnArray = Array<any Numeric>()
         for item in newArray{

@@ -8,7 +8,7 @@
 import Foundation
 public class SwiftToolsMathematics{
     public init(){}
-    func gcd(a:Int,b:Int) -> Int
+    public func gcd(a:Int,b:Int) -> Int
     {
         let min = min(a,b)
         let max = max(a,b)
@@ -18,16 +18,16 @@ public class SwiftToolsMathematics{
             return gcd(a: max-min,b: min)
         }
     }
-    func gcd(numbers:[Int])->Int{
+    public func gcd(numbers:[Int])->Int{
         numbers.reduce(0, gcd)
     }
-    func lcm(a:Int,b:Int)->Int{
+    public func lcm(a:Int,b:Int)->Int{
         return (a*b)/gcd(a: a,b: b)
     }
-    func lcm(numbers:[Int])->Int{
+    public func lcm(numbers:[Int])->Int{
         return numbers.reduce(1, lcm)
     }
-    func eqFractions(a:String,b:String)->Bool{
+    public func eqFractions(a:String,b:String)->Bool{
         let aArray = a.components(separatedBy: "/")
         let bArray = b.components(separatedBy: "/")
         guard let aNewArray = Int(aArray[0]) else {
@@ -51,12 +51,12 @@ public class SwiftToolsMathematics{
         }
         
     }
-    func multiplesNumbers(lower:Int,upper:Int,number:Int){
+    public func multiplesNumbers(lower:Int,upper:Int,number:Int){
         for item in stride(from: lower, to: upper+number, by: number){
             debugPrint("multiples of \(number) = ",item)
         }
     }
-    func homFractions(a:String,b:String)->(String,String){
+    public func homFractions(a:String,b:String)->(String,String){
         let aArray = a.components(separatedBy: "/")
         let bArray = b.components(separatedBy: "/")
         let ekp = lcm(a: Int(aArray[1]) ?? 0, b: Int(bArray[1]) ?? 0)
@@ -77,7 +77,7 @@ public class SwiftToolsMathematics{
         return (firstFraq,secondFraq)
         
     }
-    func addFractions(a:String,b:String)->String{
+    public func addFractions(a:String,b:String)->String{
         let aArray = a.components(separatedBy: "/")
         let bArray = b.components(separatedBy: "/")
         guard let aArrayNew = Int(aArray[0]) else {
@@ -91,7 +91,7 @@ public class SwiftToolsMathematics{
         }
         return String(format:"%d / %d",aArrayNew + bArrayNew,aArrayNew1)
     }
-    func subFractions(a:String,b:String)->String{
+    public func subFractions(a:String,b:String)->String{
         let aArray = a.components(separatedBy: "/")
         let bArray = b.components(separatedBy: "/")
         guard let aArrayNew = Int(aArray[0]) else {
@@ -105,7 +105,7 @@ public class SwiftToolsMathematics{
         }
         return String(format:"%d / %d",aArrayNew - bArrayNew,aArrayNew1)
     }
-    func multiFractions(a:String,b:String)->String{
+    public func multiFractions(a:String,b:String)->String{
         let aArray = a.components(separatedBy: "/")
         let bArray = b.components(separatedBy: "/")
         guard let aArrayNew = Int(aArray[0]) else {
@@ -125,7 +125,7 @@ public class SwiftToolsMathematics{
         let klasma = String(format:"%d / %d",arithmitis,paronomastis)
         return klasma
     }
-    func multiFractions(array:[String])->String{
+    public func multiFractions(array:[String])->String{
         var arithmitisResult:Int = 1
         var paronomastisResult:Int = 1
         for item in 0..<array.count{
