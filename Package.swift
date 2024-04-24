@@ -23,9 +23,11 @@ let package = Package(
         .target(
             name: "SwiftTools"),
         .target(
-            name: "SwiftToolsMathematics"),
+            name: "SwiftToolsMathematics",
+            path:"Sources/SwiftToolsMathematics"),
         .target(
-            name: "SwiftToolsString"),
+            name: "SwiftToolsString",
+            path:"Sources/SwiftToolsString"),
         .testTarget(
             name: "SwiftToolsTests",
             dependencies: ["SwiftTools"]),
