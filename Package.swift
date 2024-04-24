@@ -16,6 +16,10 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "SwiftTools"),
+        .target(
+            name: "SwiftToolsMathematics"),
+        .target(
+            name: "SwiftToolsString"),
         .testTarget(
             name: "SwiftToolsTests",
             dependencies: ["SwiftTools"]),
